@@ -14,7 +14,10 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\chilli.png" />
+    <None Remove="Assets\door.png" />
+    <None Remove="Assets\escaperoom.png" />
     <None Remove="Assets\football.png" />
+    <None Remove="Assets\quote.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,7 +53,16 @@
     <Content Update="Assets\chilli.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Update="Assets\door.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\escaperoom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Update="Assets\football.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\quote.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -14,7 +14,6 @@ using Microsoft.UI.Xaml.Navigation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-
 namespace quiz
 {
     public sealed partial class MainWindow : Window
@@ -22,9 +21,9 @@ namespace quiz
         // List question and answer
         private readonly List<(string Question, string[] Answer)> questions = new()
         {
-            ("abc", new[] { "Y", "Ế", "U", "Ớ", "T" }),
-            ("abc", new[] { "2", "0", "1", "8", "" }),
-            ("abc", new[] { "5", "", "", "", "" })
+            ("Đuổi hình bắt chữ", new[] { "Y", "Ế", "U", "Ớ", "T" }),
+            ("Sự kiện này diễn ra năm mấy?", new[] { "2", "0", "1", "8", "" }),
+            ("Tìm giá trị?", new[] { "5", "", "", "", "" })
         };
 
         private int currentQuestionIndex = 0;
@@ -39,6 +38,13 @@ namespace quiz
             var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
             appWindow.SetPresenter(Microsoft.UI.Windowing.AppWindowPresenterKind.FullScreen);
 
+            // LoadQuestion();
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            startGrid.Visibility = Visibility.Collapsed;
+            gameGrid.Visibility = Visibility.Visible;
             LoadQuestion();
         }
 
@@ -121,11 +127,5 @@ namespace quiz
             };
             await dialog.ShowAsync();
         }
-
     }
 }
-
-
-
-
-
